@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Article.Nucleotide.CodeGenerator\Article.Nucleotide.CodeGenerator.csproj" OutputItemType="Analyzer" />
+  </ItemGroup>
+
+  <Target Name="DeleteOldGeneratedFiles" BeforeTargets="BeforeBuild" Condition="$(SaveSourceGeneratorOutput) == 'true' and $(IntermediateOutputPath) != ''">
+    <ItemGroup>
+      <FilesToDelete Include="$(IntermediateOutputPath)Generated\nucleotide.feature.*.g.cs" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
+</Project>
