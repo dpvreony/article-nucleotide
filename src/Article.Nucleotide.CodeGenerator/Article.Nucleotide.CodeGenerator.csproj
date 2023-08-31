@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.186" PrivateAssets="all" GeneratePathProperty="true" />
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.189" PrivateAssets="all" GeneratePathProperty="true" />
   </ItemGroup>
 
   <PropertyGroup>
